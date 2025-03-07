@@ -1,0 +1,47 @@
+$dark-accent-color: #2887d9;
+$text-color: #3a3b3d;
+$additional-color: #fff;
+$background-color: #eceff7;
+$light-accent-color: #72b7f2;
+$form-color: #9c9696;
+$input-bg-color: #f7f7f8;
+$accent-bg-color: #d0e1f1;
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  transition: all 0.5s ease;
+}
+
+body {
+  font-family: "Open sans";
+  background-color: $background-color;
+}
+
+.backdrop {
+  background-color: #2886d950;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+*::selection {
+  background-color: $dark-accent-color;
+  color: $additional-color;
+}
