@@ -1,0 +1,121 @@
+$dark-accent-color: #2887d9;
+$text-color: #3a3b3d;
+$additional-color: #fff;
+$background-color: #eceff7;
+$light-accent-color: #72b7f2;
+$form-color: #9c9696;
+$input-bg-color: #f7f7f8;
+$accent-bg-color: #d0e1f1;
+
+.menu {
+  background-color: $background-color;
+  height: 100dvh;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 22px;
+  }
+
+  &__search,
+  &__close {
+    background-color: transparent;
+  }
+
+  &__settings {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 22px;
+    border-bottom: 1px solid $light-accent-color;
+    border-top: 1px solid $light-accent-color;
+  }
+
+  &__setting {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__icon {
+    stroke-width: 1.5px;
+    stroke: $light-accent-color;
+    fill: none;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16px;
+    color: $text-color;
+
+    &--disabled {
+      color: $accent-bg-color;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 22px 0;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2.75;
+    color: $text-color;
+    border-bottom: 1px solid $accent-bg-color;
+    width: 100%;
+    display: block;
+  }
+
+  &__adresses {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__adress {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__contact {
+    stroke-width: 1.5px;
+    stroke: $dark-accent-color;
+    fill: none;
+  }
+
+  &__subtitle {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.125;
+    color: $dark-accent-color;
+    margin-bottom: 8px;
+  }
+
+  &__info {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.375;
+    color: $text-color;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}

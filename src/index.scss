@@ -16,14 +16,10 @@ code {
 @import "./components/base/common";
 @import "./components/base/container";
 
-$dark-accent-color: #2887d9;
-$text-color: #3a3b3d;
-$additional-color: #fff;
-$background-color: #eceff7;
-$light-accent-color: #72b7f2;
-$form-color: #9c9696;
-$input-bg-color: #f7f7f8;
-$accent-bg-color: #d0e1f1;
+@import url(./utiles/_keyframes.scss);
+@import url(./utiles/_mixin.scss);
+@import url(./utiles/_placeholders.scss);
+@import url(./utiles/_vars.scss);
 
 .header {
   &__item:nth-child(1) &__link {
