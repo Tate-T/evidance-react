@@ -1,8 +1,10 @@
+import { Call } from "./components/Call/Call";
 import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
+import { Hero } from "./components/Hero/Hero";
 import { Menu } from "./components/Menu/Menu";
 import { Registration } from "./components/Registration/Registration";
-import { Hero } from "./components/Hero/Hero";
+import { Search } from "./components/Search/Search";
 
 function App() {
   return (
@@ -10,12 +12,12 @@ function App() {
       <Header />
       <Hero />
       {/* <Numbers /> */}
-      {/* <Search /> */}
+      <Search />
       {/* <Services /> */}
       {/* <Faq /> */}
       {/* <Reviews /> */}
       <Footer />
-      {/* <Call /> */}
+      <Call />
       <Registration />
       {/* <Thank /> */}
       {/* <Record /> */}
