@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/evidance-react/static/css/main.cfe5b9bf.css",
+    "main.js": "/evidance-react/static/js/main.ac297d51.js",
+    "static/media/reviews-photo2@1x-desktop.webp": "/evidance-react/static/media/reviews-photo2@1x-desktop.0add8e5d464cd1c3b723.webp",
+    "static/media/reviews-photo1@1x-desktop.webp": "/evidance-react/static/media/reviews-photo1@1x-desktop.625cfbb64e30d62f271c.webp",
+    "index.html": "/evidance-react/index.html",
+    "main.cfe5b9bf.css.map": "/evidance-react/static/css/main.cfe5b9bf.css.map",
+    "main.ac297d51.js.map": "/evidance-react/static/js/main.ac297d51.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfe5b9bf.css",
+    "static/js/main.ac297d51.js"
+  ]
+}
