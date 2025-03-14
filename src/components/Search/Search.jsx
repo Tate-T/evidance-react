@@ -49,7 +49,7 @@ export const Search = () => {
                 srcset=""
                 media="min-width: 768px"
               />
-              
+
                <img
                 src={doctorPictureMobile12x}
                 alt=""
@@ -57,9 +57,6 @@ export const Search = () => {
                 srcset=""
                 media="min-width: 768px"
               />
-
-
-
 
 
               {/* 
