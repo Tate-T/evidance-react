@@ -1,6 +1,7 @@
 import doctorPicture11x from "../../img/desktop/search/search-photo1@1x-desktop.webp";
 import doctorPicture12x from "../../img/desktop/search/search-photo1@2x-desktop.webp";
 import doctorPictureMobile11x from "../../img/mobile/search/search-photo1@1x-mobile.webp";
+import doctorPictureMobile12x from "../../img/mobile/search/search-photo1@2x-mobile.webp";
 import doctorPicture21x from "../../img/desktop/search/search-photo2@1x-desktop.webp";
 import doctorPicture22x from "../../img/desktop/search/search-photo2@2x-desktop.webp";
 import doctorPicture31x from "../../img/desktop/search/search-photo3@1x-desktop.webp";
@@ -43,6 +44,14 @@ export const Search = () => {
 
               <img
                 src={doctorPictureMobile11x}
+                alt=""
+                sizes=""
+                srcset=""
+                media="min-width: 768px"
+              />
+              
+               <img
+                src={doctorPictureMobile12x}
                 alt=""
                 sizes=""
                 srcset=""
