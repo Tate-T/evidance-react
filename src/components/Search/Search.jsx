@@ -1,3 +1,10 @@
+import doctorPicture11x from "../../img/desktop/search/search-photo1@1x-desktop.webp";
+import doctorPicture12x from "../../img/desktop/search/search-photo1@2x-desktop.webp";
+import doctorPictureMobile11x from "../../img/mobile/search/search-photo1@1x-mobile.webp";
+import doctorPicture21x from "../../img/desktop/search/search-photo2@1x-desktop.webp";
+import doctorPicture22x from "../../img/desktop/search/search-photo2@2x-desktop.webp";
+import doctorPicture31x from "../../img/desktop/search/search-photo3@1x-desktop.webp";
+import doctorPicture32x from "../../img/desktop/search/search-photo3@2x-desktop.webp";
 import "./Seacrh.scss";
 
 export const Search = () => {
@@ -25,12 +32,31 @@ export const Search = () => {
           </div>
           <ul className="search__photos">
             <li className="search__photo">
-              <picture>
+              <img
+                src={doctorPicture11x}
+                alt=""
+                sizes=""
+                srcset=""
+                media="min-width: 1200px"
+              />
+              {/* <img src={doctorPicture12x} alt="" media="min-width: 1200px" /> */}
+
+              <img
+                src={doctorPictureMobile11x}
+                alt=""
+                sizes=""
+                srcset=""
+                media="min-width: 768px"
+              />
+
+
+
+
+
+              {/* 
+             /* <picture>
                 <source
-                  srcset="
-                ./img/desktop/search/search-photo1@1x-desktop.webp 1x,
-                ./img/desktop/search/search-photo1@2x-desktop.webp 2x
-              "
+                  srcset=` ${doctorPicture11x} 1x,${doctorPicture1x} 2x`
                   media="(min-width: 1200px)"
                 />
                 <source
@@ -52,10 +78,12 @@ export const Search = () => {
                   alt="Веб-сайт Технокряк"
                   src="./img/mobile/search/search-photo1@1x-mobile.webp 1x"
                 />
-              </picture>
+              </picture> */}
             </li>
             <li className="search__photo">
-              <picture>
+              <img src={doctorPicture21x} alt="" sizes="" srcset="" />
+              <img src={doctorPicture22x} alt="" />
+              {/* <picture>
                 <source
                   srcset="
                 ./img/desktop/search/search-photo2@1x-desktop.webp 1x,
@@ -82,10 +110,12 @@ export const Search = () => {
                   alt="Веб-сайт Технокряк"
                   src="./img/mobile/search/search-photo2@1x-mobile.webp 1x"
                 />
-              </picture>
+              </picture> */}
             </li>
             <li className="search__photo">
-              <picture>
+              <img src={doctorPicture31x} alt="" sizes="" srcset="" />
+              <img src={doctorPicture32x} alt="" />
+              {/* <picture>
                 <source
                   srcset="
                 ./img/desktop/search/search-photo3@1x-desktop.webp 1x,
@@ -105,7 +135,7 @@ export const Search = () => {
                   alt="Веб-сайт Технокряк"
                   src="./img/tablet/search/search-photo3@1x-tablet.webp 1x"
                 />
-              </picture>
+              </picture>{" "} */}
             </li>
           </ul>
         </div>
