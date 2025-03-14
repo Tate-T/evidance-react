@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+$dark-accent-color: #2887d9;
+$text-color: #3a3b3d;
+$additional-color: #fff;
+$background-color: #eceff7;
+$light-accent-color: #72b7f2;
+$form-color: #9c9696;
+$input-bg-color: #f7f7f8;
+$accent-bg-color: #d0e1f1;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,10 +22,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-@import "./components/base/reset";
-@import "./components/base/common";
-@import "./components/base/container";
+@import url(./components/base/_reset.scss);
+@import url(./components/base/_common.scss);
+@import url(./components/base/_container.scss);
 
 @import url(./utiles/_keyframes.scss);
 @import url(./utiles/_mixin.scss);
