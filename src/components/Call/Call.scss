@@ -1,0 +1,66 @@
+$dark-accent-color: #2887d9;
+$text-color: #3a3b3d;
+$additional-color: #fff;
+$background-color: #eceff7;
+$light-accent-color: #72b7f2;
+$form-color: #9c9696;
+$input-bg-color: #f7f7f8;
+$accent-bg-color: #d0e1f1;
+
+.call {
+  pointer-events: all;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #83a9c9;
+  width: 50px;
+  height: 50px;
+
+  &__container {
+    pointer-events: none;
+    position: fixed;
+    left: 50%;
+    bottom: 50px;
+    transform: translate(-50%, 0);
+  }
+
+  &__btn {
+    border-radius: 50%;
+    border: 1px solid $dark-accent-color;
+    background: #d0e1f1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    line-height: 0;
+  }
+
+  &__icon {
+    fill: none;
+    stroke: $dark-accent-color;
+  }
+}
+
+@media screen and (min-width: 1334px) {
+  .call {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #83a9c9;
+
+    &__btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid $dark-accent-color;
+    }
+
+    &__icon {
+      width: 44px;
+      height: 48px;
+    }
+  }
+}
