@@ -1,11 +1,6 @@
 import doctorPicture11x from "../../img/desktop/search/search-photo1@1x-desktop.webp";
-import doctorPicture12x from "../../img/desktop/search/search-photo1@2x-desktop.webp";
-import doctorPictureMobile11x from "../../img/mobile/search/search-photo1@1x-mobile.webp";
-import doctorPictureMobile12x from "../../img/mobile/search/search-photo1@2x-mobile.webp";
 import doctorPicture21x from "../../img/desktop/search/search-photo2@1x-desktop.webp";
-import doctorPicture22x from "../../img/desktop/search/search-photo2@2x-desktop.webp";
 import doctorPicture31x from "../../img/desktop/search/search-photo3@1x-desktop.webp";
-import doctorPicture32x from "../../img/desktop/search/search-photo3@2x-desktop.webp";
 import "./Seacrh.scss";
 
 export const Search = () => {
@@ -38,11 +33,11 @@ export const Search = () => {
                 alt=""
                 sizes=""
                 srcset=""
-                media="min-width: 1200px"
+                className="search__img"
               />
               {/* <img src={doctorPicture12x} alt="" media="min-width: 1200px" /> */}
 
-              <img
+              {/* <img
                 src={doctorPictureMobile11x}
                 alt=""
                 sizes=""
@@ -56,8 +51,7 @@ export const Search = () => {
                 sizes=""
                 srcset=""
                 media="min-width: 768px"
-              />
-
+              /> */}
 
               {/* 
              /* <picture>
@@ -87,8 +81,14 @@ export const Search = () => {
               </picture> */}
             </li>
             <li className="search__photo">
-              <img src={doctorPicture21x} alt="" sizes="" srcset="" />
-              <img src={doctorPicture22x} alt="" />
+              <img
+                src={doctorPicture21x}
+                alt=""
+                sizes=""
+                srcset=""
+                className="search__img"
+              />
+              {/* <img src={doctorPicture22x} alt="" /> */}
               {/* <picture>
                 <source
                   srcset="
@@ -119,8 +119,14 @@ export const Search = () => {
               </picture> */}
             </li>
             <li className="search__photo">
-              <img src={doctorPicture31x} alt="" sizes="" srcset="" />
-              <img src={doctorPicture32x} alt="" />
+              <img
+                src={doctorPicture31x}
+                alt=""
+                sizes=""
+                srcset=""
+                className="search__img"
+              />
+              {/* <img src={doctorPicture32x} alt="" /> */}
               {/* <picture>
                 <source
                   srcset="

@@ -1,34 +1,14 @@
-import { Call } from './components/Call/Call';
-import { Footer } from './components/Footer/Footer';
-import { Header } from './components/Header/Header';
-import { Hero } from './components/Hero/Hero';
-import { Menu } from './components/Menu/Menu';
-import { Registration } from './components/Registration/Registration';
-import { Search } from './components/Search/Search';
-import { Faq } from './components/Faq/Faq';
-import { Reviews } from './components/Reviews/Reviews';
-import { Contact } from './components/Contact/Contact';
+import { Route, Routes } from "react-router-dom";
 
-function App() {
-	return (
-		<>
-			<Header />
-			<Hero />
-			{/* <Numbers /> */}
-			<Search />
-			{/* <Services /> */}
-			<Faq />
-			<Reviews />
-			<Footer />
-			<Call />
-			<Registration />
-			{/* <Thank /> */}
-			{/* <Record /> */}
-			{/* <Vaccination /> */}
-			<Contact />
-			<Menu />
-		</>
-	);
-}
+import "./index.scss";
+import { DoctorsPage } from "./pages/DoctorsPage";
+import { MainPage } from "./pages/MainPage";
 
-export default App;
+export const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/doctors" element={<DoctorsPage />} />
+    </Routes>
+  );
+};

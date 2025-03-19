@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Header.scss";
 
 export const Header = () => {
@@ -9,7 +10,7 @@ export const Header = () => {
             <use href="./svg/icons.svg#burger-menu"></use>
           </svg>
         </button>
-        <a href="./index.html" class="header__logo">
+        <Link to="/" class="header__logo">
           <picture>
             <source
               srcset="
@@ -40,7 +41,7 @@ export const Header = () => {
               alt="logo"
             />
           </picture>
-        </a>
+        </Link>
         <button aria-label="search" class="header__btn">
           <svg class="header__search" width="24" height="24">
             <use href="./svg/icons.svg#search"></use>
@@ -48,34 +49,34 @@ export const Header = () => {
         </button>
         <ul class="header__list">
           <li class="header__item">
-            <a href="./index.html#about" class="header__link">
+            <Link to="./index.html#about" class="header__link">
               Про нас
-            </a>
+            </Link>
           </li>
           <li class="header__item">
-            <a href="./doctors-page.html" class="header__link">
+            <Link to="/doctors" class="header__link">
               Лікарі
-            </a>
+            </Link>
           </li>
           <li class="header__item">
-            <a href="./index.html#cost" class="header__link">
+            <Link to="/services" class="header__link">
               Вартість
-            </a>
+            </Link>
           </li>
           <li class="header__item">
-            <a href="./index.html#questions" class="header__link">
+            <Link to="/faq" class="header__link">
               Запитання
-            </a>
+            </Link>
           </li>
           <li class="header__item">
-            <a href="./index.html#reviews" class="header__link">
+            <Link to="/reviews" class="header__link">
               Відгуки
-            </a>
+            </Link>
           </li>
           <li class="header__item">
-            <a href="./index.html#contact" class="header__link">
+            <Link to="/contact" class="header__link">
               Контакти
-            </a>
+            </Link>
           </li>
         </ul>
         <div class="header__wrapper">
