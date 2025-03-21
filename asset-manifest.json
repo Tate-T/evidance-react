@@ -1,16 +1,25 @@
 {
   "files": {
-    "main.css": "/evidance-react/static/css/main.9dc46c0d.css",
-    "main.js": "/evidance-react/static/js/main.1ffb5557.js",
+    "main.css": "/evidance-react/static/css/main.e58db834.css",
+    "main.js": "/evidance-react/static/js/main.ab91a72d.js",
+    "static/media/hero-photo@1x-desktop.webp": "/evidance-react/static/media/hero-photo@1x-desktop.e52c93ff065e389ab74d.webp",
     "static/media/search-photo3@1x-desktop.webp": "/evidance-react/static/media/search-photo3@1x-desktop.2df3e6ba5f8604aeac60.webp",
     "static/media/search-photo2@1x-desktop.webp": "/evidance-react/static/media/search-photo2@1x-desktop.3516506addfd047ded76.webp",
     "static/media/search-photo1@1x-desktop.webp": "/evidance-react/static/media/search-photo1@1x-desktop.e4050221b431c31d871c.webp",
+    "static/media/logo@1x-desktop.webp": "/evidance-react/static/media/logo@1x-desktop.3d73f1c53daaeeeb48df.webp",
+    "static/media/reviews-photo2@1x-desktop.webp": "/evidance-react/static/media/reviews-photo2@1x-desktop.0add8e5d464cd1c3b723.webp",
+    "static/media/reviews-photo1@1x-desktop.webp": "/evidance-react/static/media/reviews-photo1@1x-desktop.625cfbb64e30d62f271c.webp",
+    "static/media/pills.svg": "/evidance-react/static/media/pills.916377fe50c7d059b582.svg",
+    "static/media/stethoscope.svg": "/evidance-react/static/media/stethoscope.fa841ae129adc0e9f1e1.svg",
+    "static/media/syringe.svg": "/evidance-react/static/media/syringe.f190456b4ec620674b9c.svg",
+    "static/media/drip.svg": "/evidance-react/static/media/drip.fa55b83ef70bc55d1bca.svg",
+    "static/media/heart.svg": "/evidance-react/static/media/heart.21481ac26cb8c863e684.svg",
     "index.html": "/evidance-react/index.html",
-    "main.9dc46c0d.css.map": "/evidance-react/static/css/main.9dc46c0d.css.map",
-    "main.1ffb5557.js.map": "/evidance-react/static/js/main.1ffb5557.js.map"
+    "main.e58db834.css.map": "/evidance-react/static/css/main.e58db834.css.map",
+    "main.ab91a72d.js.map": "/evidance-react/static/js/main.ab91a72d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9dc46c0d.css",
-    "static/js/main.1ffb5557.js"
+    "static/css/main.e58db834.css",
+    "static/js/main.ab91a72d.js"
   ]
 }
