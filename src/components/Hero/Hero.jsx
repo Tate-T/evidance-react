@@ -1,4 +1,5 @@
 import "./Hero.scss";
+import photo1 from "./img/hero-photo@1x-desktop.webp";
 
 export const Hero = () => {
   return (
@@ -36,33 +37,15 @@ export const Hero = () => {
         </ul>
         <div class="hero__imgblock">
           <picture>
-            <source
-              srcset="
-                  ./img/desktop/hero/hero-photo@1x-desktop.webp 1x,
-                  ./img/desktop/hero/hero-photo@2x-desktop.webp 2x
-                "
-              media="(min-width: 1766px)"
-            />
-            <source
-              srcset="
-                  ./img/tablet/hero/hero-photo@1x-tablet.webp 1x,
-                  ./img/tablet/hero/hero-photo@2x-tablet.webp 2x
-                "
-              media="(min-width: 1334px)"
-            />
-            <source
-              srcset="
-                  ./img/mobile/hero/hero-photo@1x-mobile.webp 1x,
-                  ./img/mobile/hero/hero-photo@2x-mobile.webp 2x
-                "
-              media="(max-width: 1333px)"
-            />
+            <source srcset={photo1} media="(min-width: 1766px)" />
+            <source srcset={photo1} media="(min-width: 1334px)" />
+            <source srcset={photo1} media="(max-width: 1333px)" />
             <img
               fetchpriority="high"
               class="hero__img"
               width="240"
               height="240"
-              src="../img/mobile/hero/doctor-photo@1x-mobile.webp 1x"
+              src={photo1}
               alt="A mom with a baby"
             />
           </picture>
