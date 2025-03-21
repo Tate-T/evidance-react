@@ -22,127 +22,132 @@
     justify-content: center;
     align-items: center;
 
-    .numbers-container {
-      height: 894px;
-      width: 1720px; //to vw
-
+    .container {
       display: flex;
-      flex-flow: column wrap;
       justify-content: space-between;
-
-      .numbers-title {
-        font-size: 48px; //to vw
-        font-weight: 600;
-        color: #2887d9;
-      }
-
-      .cards-container {
-        height: 800px;
+      align-items: center;
+      .numbers-container {
+        height: 894px;
         width: 1720px; //to vw
 
         display: flex;
-        flex-flow: row wrap;
-        overflow: hidden;
+        flex-flow: column wrap;
+        justify-content: space-between;
 
-        border: none;
-        border-radius: 50px;
+        .numbers-title {
+          font-size: 48px; //to vw
+          font-weight: 600;
+          color: #2887d9;
+        }
 
-        .cards-about {
-          height: 400px;
-          width: 860px; //to vw
+        .cards-container {
+          height: 800px;
+          width: 1720px; //to vw
 
-          background-repeat: no-repeat;
           display: flex;
+          flex-flow: row wrap;
+          overflow: hidden;
 
-          div {
-            height: 186px;
-            width: 500px;
+          border: none;
+          border-radius: 50px;
 
+          .cards-about {
+            height: 400px;
+            width: 860px; //to vw
+
+            background-repeat: no-repeat;
             display: flex;
-            flex-flow: column;
-            align-items: start;
-            justify-content: space-between;
 
-            margin-top: 50px;
+            div {
+              height: 186px;
+              width: 500px;
+
+              display: flex;
+              flex-flow: column;
+              align-items: start;
+              justify-content: space-between;
+
+              margin-top: 50px;
+
+              h1 {
+                font-family: "Open Sans", sans-serif;
+                font-size: 150px;
+                font-weight: 300;
+              }
+
+              p {
+                font-size: 30px;
+                font-weight: 600;
+                color: #2887d9;
+              }
+            }
+          }
+
+          .cards-about:nth-child(odd) div {
+            margin-left: 195px;
+          }
+
+          .cards-about:nth-child(even) div {
+            margin-left: 70px;
+          }
+
+          #feedback {
+            background-color: #f3dfea;
+            background-image: url(./tif/heart.svg), url(./tif/syringe.svg);
+            background-size: 193px 174px, 206px 206px;
+            background-position: -41px 145px, 40px -82px;
 
             h1 {
-              font-family: "Open Sans", sans-serif;
-              font-size: 150px;
-              font-weight: 300;
-            }
-
-            p {
-              font-size: 30px;
-              font-weight: 600;
-              color: #2887d9;
+              color: #edbbd6;
             }
           }
-        }
 
-        .cards-about:nth-child(odd) div {
-          margin-left: 195px;
-        }
+          #vaccinations {
+            position: relative;
+            background-color: #d0e1f1;
+            background-image: url(./tif/pills.svg);
+            background-size: 172px 154px;
+            background-position: 548px -104px;
 
-        .cards-about:nth-child(even) div {
-          margin-left: 70px;
-        }
-
-        #feedback {
-          background-color: #f3dfea;
-          background-image: url(./tif/heart.svg), url(./tif/syringe.svg);
-          background-size: 193px 174px, 206px 206px;
-          background-position: -41px 145px, 40px -82px;
-
-          h1 {
-            color: #edbbd6;
+            h1 {
+              color: #72b7f2;
+            }
           }
-        }
 
-        #vaccinations {
-          position: relative;
-          background-color: #d0e1f1;
-          background-image: url(./tif/pills.svg);
-          background-size: 172px 154px;
-          background-position: 548px -104px;
+          #vaccinations::after {
+            content: "";
+            position: absolute;
+            top: 113px;
+            left: 720px;
 
-          h1 {
-            color: #72b7f2;
+            width: 144px;
+            height: 124px;
+
+            background-image: url(./tif/heart.svg);
+            background-size: 144px 124px;
+            transform: scaleX(-1);
           }
-        }
 
-        #vaccinations::after {
-          content: "";
-          position: absolute;
-          top: 113px;
-          left: 720px;
+          #researches {
+            background-color: #cef2f0;
+            background-image: url(./tif/drip.svg);
+            background-size: 177px 177px;
+            background-position: -102px 154px;
 
-          width: 144px;
-          height: 124px;
-
-          background-image: url(./tif/heart.svg);
-          background-size: 144px 124px;
-          transform: scaleX(-1);
-        }
-
-        #researches {
-          background-color: #cef2f0;
-          background-image: url(./tif/drip.svg);
-          background-size: 177px 177px;
-          background-position: -102px 154px;
-
-          h1 {
-            color: #58d7d0;
+            h1 {
+              color: #58d7d0;
+            }
           }
-        }
 
-        #seniority {
-          background-color: #fce296;
-          background-image: url(./tif/stethoscope.svg);
-          background-size: 240px 345px;
-          background-position: 720px 27px;
+          #seniority {
+            background-color: #fce296;
+            background-image: url(./tif/stethoscope.svg);
+            background-size: 240px 345px;
+            background-position: 720px 27px;
 
-          h1 {
-            color: #facf4f;
+            h1 {
+              color: #facf4f;
+            }
           }
         }
       }
@@ -159,125 +164,131 @@
     justify-content: center;
     align-items: center;
 
-    .numbers-container {
-      height: 644px;
-      width: 1265px; //to vw
-
+    .container {
       display: flex;
-      flex-flow: column wrap;
       justify-content: space-between;
-
-      .numbers-title {
-        font-size: 34px;
-        font-weight: 600;
-        color: #2887d9;
-      }
-
-      .cards-container {
-        height: 565px;
-        width: 1242.5px; //to vw
+      align-items: center;
+      
+      .numbers-container {
+        height: 644px;
+        width: 1265px; //to vw
 
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         justify-content: space-between;
-        overflow: hidden;
 
-        border: none;
-        border-radius: 50px;
+        .numbers-title {
+          font-size: 34px;
+          font-weight: 600;
+          color: #2887d9;
+        }
 
-        .cards-about {
-          height: 280px;
-          width: 620px; //to vw
-          background-repeat: no-repeat;
+        .cards-container {
+          height: 565px;
+          width: 1242.5px; //to vw
+
           display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          overflow: hidden;
 
-          div {
-            height: 186px;
-            width: 500px; //to vw
+          border: none;
+          border-radius: 50px;
+
+          .cards-about {
+            height: 280px;
+            width: 620px; //to vw
+            background-repeat: no-repeat;
             display: flex;
-            flex-flow: column;
-            align-items: start;
-            justify-content: space-between;
-            margin-top: 50px;
+
+            div {
+              height: 186px;
+              width: 500px; //to vw
+              display: flex;
+              flex-flow: column;
+              align-items: start;
+              justify-content: space-between;
+              margin-top: 50px;
+
+              h1 {
+                font-family: "Open Sans", sans-serif;
+                font-size: 114px; //to vw
+                font-weight: 300;
+              }
+
+              p {
+                font-size: 23px; //to vw
+                font-weight: 400;
+                color: #2887d9;
+                font-family: "Open Sans";
+              }
+            }
+          }
+
+          .cards-about:nth-child(odd) div {
+            margin-left: 195px; //to vw
+          }
+
+          .cards-about:nth-child(even) div {
+            margin-left: 70px; //to vw
+          }
+
+          #feedback {
+            background-color: #f3dfea;
+            background-image: url(./tif/heart.svg), url(./tif/syringe.svg);
+            background-size: 136px, 146px;
+            background-position: 0 140px, 28px 0;
 
             h1 {
-              font-family: "Open Sans", sans-serif;
-              font-size: 114px; //to vw
-              font-weight: 300;
-            }
-
-            p {
-              font-size: 23px; //to vw
-              font-weight: 400;
-              color: #2887d9;
-              font-family: "Open Sans";
+              color: #edbbd6;
             }
           }
-        }
 
-        .cards-about:nth-child(odd) div {
-          margin-left: 195px; //to vw
-        }
+          #vaccinations {
+            position: relative;
+            background-color: #d0e1f1;
+            background-image: url(./tif/pills.svg);
+            background-size: 122px;
+            background-position: 390px 0;
 
-        .cards-about:nth-child(even) div {
-          margin-left: 70px; //to vw
-        }
-
-        #feedback {
-          background-color: #f3dfea;
-          background-image: url(./tif/heart.svg), url(./tif/syringe.svg);
-          background-size: 136px, 146px;
-          background-position: 0 140px, 28px 0;
-
-          h1 {
-            color: #edbbd6;
+            h1 {
+              color: #72b7f2;
+            }
           }
-        }
 
-        #vaccinations {
-          position: relative;
-          background-color: #d0e1f1;
-          background-image: url(./tif/pills.svg);
-          background-size: 122px;
-          background-position: 390px 0;
-
-          h1 {
-            color: #72b7f2;
+          #vaccinations::after {
+            content: "";
+            position: absolute;
+            bottom: 16px;
+            right: 0;
+            width: 105px;
+            height: 124px;
+            background-image: url(./tif/heart.svg);
+            background-repeat: no-repeat;
+            background-size: 105px;
+            transform: scaleX(-1);
           }
-        }
 
-        #vaccinations::after {
-          content: "";
-          position: absolute;
-          bottom: 16px;
-          right: 0;
-          width: 105px;
-          height: 124px;
-          background-image: url(./tif/heart.svg);
-          background-repeat: no-repeat;
-          background-size: 105px;
-          transform: scaleX(-1);
-        }
+          #researches {
+            background-color: #cef2f0;
+            background-image: url(./tif/drip.svg);
+            background-size: 140px;
+            background-position: 0 110px;
 
-        #researches {
-          background-color: #cef2f0;
-          background-image: url(./tif/drip.svg);
-          background-size: 140px;
-          background-position: 0 110px;
-
-          h1 {
-            color: #58d7d0;
+            h1 {
+              color: #58d7d0;
+            }
           }
-        }
 
-        #seniority {
-          background-color: #fce296;
-          background-image: url(./tif/stethoscope.svg);
-          background-size: 170px;
-          background-position: 450px 20px;
+          #seniority {
+            background-color: #fce296;
+            background-image: url(./tif/stethoscope.svg);
+            background-size: 170px;
+            background-position: 450px 20px;
 
-          h1 {
-            color: #facf4f;
+            h1 {
+              color: #facf4f;
+            }
           }
         }
       }
@@ -293,104 +304,109 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .numbers-container {
-      height: 386px;
-      width: 100vw;
-
+    .container {
       display: flex;
-      flex-flow: column wrap;
       justify-content: space-between;
+      align-items: center;
 
-      .numbers-title {
-        font-size: 16px; //to vw
-        font-weight: 700;
-        color: #2887d9;
-      }
-
-      .cards-container {
-        height: 344px;
+      .numbers-container {
+        height: 386px;
         width: 100vw;
 
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         justify-content: space-between;
 
-        border-radius: 0;
+        .numbers-title {
+          font-size: 16px; //to vw
+          font-weight: 700;
+          color: #2887d9;
+        }
 
-        .cards-about {
-          height: 86px;
-          width: 390px; //to vw
+        .cards-container {
+          height: 344px;
+          width: 100vw;
 
           display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
 
-          margin: 0;
+          border-radius: 0;
 
-          div {
+          .cards-about {
             height: 86px;
-            width: 362px; //to vw
+            width: 390px; //to vw
 
             display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            justify-content: space-between;
-
-            background-color: #fff;
 
             margin: 0;
 
+            div {
+              height: 86px;
+              width: 362px; //to vw
+
+              display: flex;
+              flex-flow: row wrap;
+              align-items: center;
+              justify-content: space-between;
+
+              background-color: #fff;
+
+              margin: 0;
+
+              h1 {
+                font-family: "Open Sans", sans-serif;
+                font-size: 64px; //to vw
+                font-weight: 400;
+              }
+
+              p {
+                font-size: 16px; //to vw
+                font-weight: 400;
+                width: 153px;
+                color: #2887d9;
+                font-family: "Open Sans";
+              }
+            }
+          }
+
+          #feedback {
+            background-color: #f3dfea;
+            background-image: url(./tif/heart.svg), url(./tif/syringe.svg);
+            background-size: 0, 0;
             h1 {
-              font-family: "Open Sans", sans-serif;
-              font-size: 64px; //to vw
-              font-weight: 400;
-            }
-
-            p {
-              font-size: 16px; //to vw
-              font-weight: 400;
-              width: 153px;
-              color: #2887d9;
-              font-family: "Open Sans";
+              color: #edbbd6;
             }
           }
-        }
 
-        #feedback {
-          background-color: #f3dfea;
-          background-image: url(./tif/heart.svg), url(./tif/syringe.svg);
-          background-size: 0, 0;
-          h1 {
-            color: #edbbd6;
+          #vaccinations {
+            position: relative;
+            background-color: #d0e1f1;
+            background-image: url(./tif/pills.svg);
+            background-size: 0, 0;
+            h1 {
+              color: #72b7f2;
+            }
           }
-        }
 
-        #vaccinations {
-          position: relative;
-          background-color: #d0e1f1;
-          background-image: url(./tif/pills.svg);
-          background-size: 0, 0;
-          h1 {
-            color: #72b7f2;
+          #researches {
+            background-color: #cef2f0;
+            background-image: url(./tif/drip.svg);
+            background-size: 0;
+
+            h1 {
+              color: #58d7d0;
+            }
           }
-        }
 
-        #researches {
-          background-color: #cef2f0;
-          background-image: url(./tif/drip.svg);
-          background-size: 0;
+          #seniority {
+            background-color: #fce296;
+            background-image: url(./tif/stethoscope.svg);
+            background-size: 0;
 
-          h1 {
-            color: #58d7d0;
-          }
-        }
-
-        #seniority {
-          background-color: #fce296;
-          background-image: url(./tif/stethoscope.svg);
-          background-size: 0;
-
-          h1 {
-            color: #facf4f;
+            h1 {
+              color: #facf4f;
+            }
           }
         }
       }
