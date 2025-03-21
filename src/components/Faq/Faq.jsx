@@ -1,5 +1,6 @@
 import React from 'react';
 import './Faq.scss';
+import bubles from './svg/icons.svg';
 
 export const Faq = () => {
 	return (
@@ -25,7 +26,7 @@ export const Faq = () => {
 							</li>
 						</ul>
 						<svg className='faq__bubles' width='430' height='934'>
-							<use href='./svg/icons.svg#faq-bubbles'></use>
+							<use href={`${bubles}#faq-bubbles`}></use>
 						</svg>
 					</aside>
 				</div>

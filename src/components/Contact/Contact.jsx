@@ -1,6 +1,7 @@
 import React from 'react';
 import './Contact.scss';
 import { useEffect } from 'react';
+import closeIcon from './svg/icons.svg#close-square';
 
 export const Contact = () => {
 	useEffect(() => {
@@ -35,7 +36,7 @@ export const Contact = () => {
 				<form autocomplete='on' className='contact__form'>
 					<button data-contact-close className='contact__close'>
 						<svg className='contact__icon' width='24' height='24'>
-							<use href='./svg/icons.svg#close-square'></use>
+							<use href={`${closeIcon}#close-square`} />
 						</svg>
 					</button>
 					<h1 className='contact__title'>
