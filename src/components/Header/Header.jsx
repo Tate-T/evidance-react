@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "./Header.scss";
 
+import logo from "./img/logo@1x-desktop.webp";
+
 export const Header = () => {
   return (
     <header class="header">
@@ -12,32 +14,14 @@ export const Header = () => {
         </button>
         <Link to="/" class="header__logo">
           <picture>
-            <source
-              srcset="
-            ./img/desktop/header/logo@1x-desktop.webp 1x,
-            ./img/desktop/header/logo@2x-desktop.webp 2x
-          "
-              media="(min-width: 1766px)"
-            />
-            <source
-              srcset="
-            ./img/tablet/header/logo@1x-tablet.webp 1x,
-            ./img/tablet/header/logo@2x-tablet.webp 2x
-          "
-              media="(min-width: 1334px)"
-            />
-            <source
-              srcset="
-            ./img/mobile/header/logo@1x-mobile.webp 1x,
-            ./img/mobile/header/logo@2x-mobile.webp 2x
-          "
-              media="(max-width: 1333px)"
-            />
+            <source srcset={logo} media="(min-width: 1766px)" />
+            <source srcset={logo} media="(min-width: 1334px)" />
+            <source srcset={logo} media="(max-width: 1333px)" />
             <img
               class="header__img"
               width="186"
               height="48"
-              src="./img/mobile/header/logo@1x-mobile.webp 1x"
+              src={logo}
               alt="logo"
             />
           </picture>
@@ -81,7 +65,12 @@ export const Header = () => {
         </ul>
         <div class="header__wrapper">
           <svg class="header__user" width="28" height="28">
-            <use href="./svg/icons.svg#header-user"></use>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.143"
+              d="M27.453 29.333C27.453 24.173 22.32 20 16 20S4.547 24.173 4.547 29.333M15.999 16a6.67 6.67 0 0 0 4.714-11.381A6.668 6.668 0 1 0 15.999 16z"
+            />
           </svg>
         </div>
         <ul class="header__states">
