@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/evidance-react/static/css/main.e58db834.css",
-    "main.js": "/evidance-react/static/js/main.4f52c3d1.js",
+    "main.css": "/evidance-react/static/css/main.d5e50a8b.css",
+    "main.js": "/evidance-react/static/js/main.01567fea.js",
     "static/media/hero-photo@1x-desktop.webp": "/evidance-react/static/media/hero-photo@1x-desktop.e52c93ff065e389ab74d.webp",
     "static/media/search-photo3@1x-desktop.webp": "/evidance-react/static/media/search-photo3@1x-desktop.2df3e6ba5f8604aeac60.webp",
     "static/media/search-photo2@1x-desktop.webp": "/evidance-react/static/media/search-photo2@1x-desktop.3516506addfd047ded76.webp",
@@ -14,12 +14,14 @@
     "static/media/syringe.svg": "/evidance-react/static/media/syringe.f190456b4ec620674b9c.svg",
     "static/media/drip.svg": "/evidance-react/static/media/drip.fa55b83ef70bc55d1bca.svg",
     "static/media/heart.svg": "/evidance-react/static/media/heart.21481ac26cb8c863e684.svg",
+    "static/media/icons.svg": "/evidance-react/static/media/icons.98f951e5a84cd7df864514093dd33b42.svg",
     "index.html": "/evidance-react/index.html",
-    "main.e58db834.css.map": "/evidance-react/static/css/main.e58db834.css.map",
-    "main.4f52c3d1.js.map": "/evidance-react/static/js/main.4f52c3d1.js.map"
+    "static/media/icons.svg#close-square": "/evidance-react/static/media/icons.0aac7b46482fc2035d7c981f470b5d4b.svg",
+    "main.d5e50a8b.css.map": "/evidance-react/static/css/main.d5e50a8b.css.map",
+    "main.01567fea.js.map": "/evidance-react/static/js/main.01567fea.js.map"
   },
   "entrypoints": [
-    "static/css/main.e58db834.css",
-    "static/js/main.4f52c3d1.js"
+    "static/css/main.d5e50a8b.css",
+    "static/js/main.01567fea.js"
   ]
 }
