@@ -33,7 +33,7 @@ export const Header = () => {
         </button>
         <ul class="header__list">
           <li class="header__item">
-            <Link to="./index.html#about" class="header__link">
+            <Link to="/" class="header__link">
               Про нас
             </Link>
           </li>
