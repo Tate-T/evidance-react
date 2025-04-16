@@ -80,9 +80,9 @@ export const Header = () => {
             </a>
           </li>
           <li target="_blank" class="header__state">
-            <a target="_blank" href="./enterD-page.html" class="header__run">
+            <Link to="/enterD" class="header__link">
               Лікар
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
