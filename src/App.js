@@ -12,8 +12,8 @@ export const App = () => {
 	return (
 		<Provider store={store}>
 			<Routes>
-				{/* <Route path='/' element={<MainPage />} />
-				<Route path='/doctors' element={<DoctorsPage />} /> */}
+				<Route path='/' element={<MainPage />} />
+				<Route path='/doctors' element={<DoctorsPage />} />
 				<Route path='/login' element={<LoginPage />} />
 				<Route path='/register' element={<RegisPage />} />
 			</Routes>

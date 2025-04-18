@@ -4,10 +4,31 @@ import logo from '../../img/desktop/header/logo@2x-desktop.webp';
 import googleLogo from '../../img/icons/Google logo.svg';
 import facebookLogo from '../../img/icons/facebook-3 logo.svg';
 import backImg from '../../img/desktop/enter/enter-img@1x-desktop.webp';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/userSlice';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 export const LoginP = () => {
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const auth = getAuth();
+
+	const preventDef = e => {
+		e.preventDefault();
+		handleLogin(formData.email, formData.password);
+	};
+
+	const handleLogin = (email, password) => {
+		const auth = getAuth();
+		signInWithEmailAndPassword(auth, email, password)
+			.then(console.log, navigate('/'))
+			.catch(console.error);
+	};
+
 	const [formData, setFormData] = useState({
-		phone: '',
+		email: '',
 		password: '',
 	});
 
@@ -19,27 +40,22 @@ export const LoginP = () => {
 		}));
 	};
 
-	const handleSubmit = e => {
-		e.preventDefault();
-		console.log('Form submitted:', formData);
-	};
-
 	return (
 		<div className='login-container'>
 			<img src={logo} alt='' className='login-logo' />
 			<img src={backImg} alt='' className='login-backImg' />
 			<div className='login-form'>
 				<h2 className='login-title'>Вхід в особистий кабінет</h2>
-				<form onSubmit={handleSubmit} className='form'>
+				<form onSubmit={preventDef} className='form'>
 					<div className='login-form-group'>
-						<label htmlFor='phone' className='form-text'>
-							Персональний номер
+						<label htmlFor='email' className='form-text'>
+							Емайл
 						</label>
 						<input
-							type='number'
-							id='phone'
-							name='phone'
-							value={formData.phone}
+							type='email'
+							id='email'
+							name='email'
+							value={formData.email}
 							onChange={handleChange}
 							required
 						/>
@@ -70,7 +86,7 @@ export const LoginP = () => {
 
 				<div className='login-login'>
 					<span>Вперше тут?</span>
-					<a href='#'>Зареєструватися</a>
+					<Link to='/register'>Зареєструватися</Link>
 				</div>
 
 				<div className='login-social'>
