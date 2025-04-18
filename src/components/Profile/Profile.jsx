@@ -5,7 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 const Profile = () => {
   useEffect(() => {
     const loginSuccess = sessionStorage.getItem("loginSuccess");
-    console.log(loginSuccess);
     toast.success(`${loginSuccess}`, {
       position: "top-right",
       autoClose: 5000,
