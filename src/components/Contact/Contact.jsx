@@ -7,7 +7,6 @@ import closeIcon from "./svg/icons.svg#close-square";
 export const Contact = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.modal.isOpen);
-  console.log(isOpen);
 
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {

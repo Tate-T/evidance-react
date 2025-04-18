@@ -1,6 +1,8 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { Bounce, ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { login } from "../../redux/authSlice";
 import "./EnterD.scss";
 import logo from "./img/logo@1x-desktop.webp";
@@ -10,15 +12,34 @@ export const EnterD = () => {
   const navigate = useNavigate();
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
+  const error = useSelector((state) => state.auth.error);
+  const user = useSelector((state) => state.auth.user);
+
+  useEffect(() => {
+    const successMessage = sessionStorage.getItem("loginSuccess");
+    if (successMessage) {
+      toast.success(successMessage);
+      sessionStorage.removeItem("loginSuccess");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (user && !error) {
+      sessionStorage.setItem(
+        "loginSuccess",
+        `Привіт, ${user.name}! Ви успішно авторизувалися`
+      );
+      navigate("/profile");
+    }
+
+    if (error) {
+      toast.error(error);
+    }
+  }, [user, error, navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (number === "EV-012345" && password === "password123") {
-      dispatch(login({ number, password }));
-      navigate("/");
-    } else {
-      alert("Невірний логін або пароль");
-    }
+    dispatch(login({ number, password }));
   };
 
   return (
@@ -89,6 +110,7 @@ export const EnterD = () => {
               </label>
             </li>
           </ul>
+          {error && <p className="enterD__error">{error}</p>}
           <button type="submit" className="enterD__btn">
             Вхід
           </button>
@@ -107,7 +129,7 @@ export const EnterD = () => {
             <li className="enterD__media">
               <a
                 target="_blank"
-                href="https://www.google.com/search?q=google&oq=&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxjqAjIJCAAQIxgnGOoCMgkIARAjGCcY6gIyCQgCECMYJxjqAjIJCAMQIxgnGOoCMgkIBBAjGCcY6gIyCQgFECMYJxjqAjIJCAYQIxgnGOoCMgkIBxAjGCcY6gLSAQg1NzU5ajBqN6gCCLACAQ&sourceid=chrome&ie=UTF-8"
+                href="https://www.google.com/search?q=google"
                 className="enterD__address"
               >
                 <svg className="enterD__icon" width="36" height="36">
@@ -131,6 +153,19 @@ export const EnterD = () => {
           </ul>
         </form>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </section>
   );
 };
