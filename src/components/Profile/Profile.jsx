@@ -5,20 +5,17 @@ import "react-toastify/dist/ReactToastify.css";
 const Profile = () => {
   useEffect(() => {
     const loginSuccess = sessionStorage.getItem("loginSuccess");
-    if (loginSuccess) {
-      toast.success(`${loginSuccess}`, {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Bounce,
-      });
-      sessionStorage.removeItem("loginSuccess");
-    }
+    toast.success(`${loginSuccess}`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   }, []);
 
   return (
