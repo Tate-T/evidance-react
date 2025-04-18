@@ -3,8 +3,55 @@ import './RegisP.scss';
 import logo from '../../img/desktop/header/logo@2x-desktop.webp';
 import googleLogo from '../../img/icons/Google logo.svg';
 import facebookLogo from '../../img/icons/facebook-3 logo.svg';
+import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/userSlice';
+import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 export const RegisP = () => {
+	const dispatch = useDispatch();
+	const navigate = useNavigate();
+	const auth = getAuth();
+
+	const preventDef = e => {
+		e.preventDefault();
+		handleRegister(formData.email, formData.password);
+	};
+
+	const handleRegister = (email, password) => {
+		const auth = getAuth();
+		createUserWithEmailAndPassword(auth, email, password)
+			.then(({ user }) => {
+				console.log(user);
+
+				formData.id = user.uid;
+				formData.token = user.accessToken;
+
+				console.log(formData);
+
+				dispatch(
+					setUser({
+						firstName: formData.firstName,
+						lastname: formData.lastname,
+						middleName: formData.middleName,
+						birthMonth: formData.birthMonth,
+						birthYear: formData.birthYear,
+						birthDay: formData.birthDay,
+						gender: formData.gender,
+						password: formData.password,
+						email: formData.email,
+						id: formData.id,
+						token: formData.token,
+					})
+				);
+				console.log();
+				navigate('/');
+			})
+			.catch(console.error);
+	};
+
 	const [formData, setFormData] = useState({
 		lastName: '',
 		firstName: '',
@@ -13,8 +60,10 @@ export const RegisP = () => {
 		birthDay: '',
 		birthYear: '',
 		gender: '',
-		phone: '',
+		password: '',
 		email: '',
+		id: null,
+		token: null,
 	});
 
 	const handleChange = e => {
@@ -23,11 +72,6 @@ export const RegisP = () => {
 			...prevState,
 			[name]: value,
 		}));
-	};
-
-	const handleSubmit = e => {
-		e.preventDefault();
-		console.log('Form submitted:', formData);
 	};
 
 	const days = Array.from({ length: 31 }, (_, i) => i + 1);
@@ -43,7 +87,7 @@ export const RegisP = () => {
 			<img src={logo} alt='' className='registration-logo' />
 			<div className='registration-form'>
 				<h2 className='registration-title'>Реєстрація</h2>
-				<form onSubmit={handleSubmit} className='form'>
+				<form onSubmit={preventDef} className='form'>
 					<div className='registration-form-group'>
 						<label htmlFor='lastName' className='form-text'>
 							Прізвище
@@ -164,14 +208,14 @@ export const RegisP = () => {
 					</div>
 
 					<div className='registration-form-group'>
-						<label htmlFor='phone' className='form-text'>
-							Мобільний телефон
+						<label htmlFor='password' className='form-text'>
+							Пароль
 						</label>
 						<input
-							type='tel'
-							id='phone'
-							name='phone'
-							value={formData.phone}
+							type='pass'
+							id='password'
+							name='password'
+							value={formData.password}
 							onChange={handleChange}
 							required
 						/>
@@ -198,7 +242,7 @@ export const RegisP = () => {
 
 				<div className='registration-login'>
 					<span>Вже зараєстровані?</span>
-					<a href='#'>Увійти</a>
+					<Link to='/login'>Увійти</Link>
 				</div>
 
 				<div className='registration-social'>
