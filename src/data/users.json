@@ -1,0 +1,14 @@
+[
+  {
+    "number": "EV-012345",
+    "password": "password123",
+    "name": "Іван",
+    "email": "ivan@example.com"
+  },
+  {
+    "number": "EV-054321",
+    "password": "secure456",
+    "name": "Олена",
+    "email": "olena@example.com"
+  }
+]

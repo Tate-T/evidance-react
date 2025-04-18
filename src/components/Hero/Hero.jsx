@@ -3,21 +3,21 @@ import photo1 from "./img/hero-photo@1x-desktop.webp";
 
 export const Hero = () => {
   return (
-    <section class="hero">
-      <div class="hero__line"></div>
-      <div class="container">
-        <h1 data-text="Evidence" class="hero__title">
+    <section className="hero">
+      <div className="hero__line"></div>
+      <div className="container">
+        <h1 data-text="Evidence" className="hero__title">
           Evidence
         </h1>
-        <p class="hero__text">
+        <p className="hero__text">
           Територія сучаної педіатрії - доказ нашої любові
         </p>
-        <button type="button" data-regis-open class="hero__btn">
+        <button type="button" data-regis-open className="hero__btn">
           Записатись на прийом
         </button>
-        <ul class="hero__list">
-          <li class="hero__item">
-            <svg class="hero__icon" width="42" height="42">
+        <ul className="hero__list">
+          <li className="hero__item">
+            <svg className="hero__icon" width="42" height="42">
               <path
                 stroke-miterlimit="10"
                 stroke-width="1.143"
@@ -30,10 +30,10 @@ export const Hero = () => {
                 d="M25.048 12c0-.8-.627-2.027-1.56-3.027-.853-.92-1.987-1.64-3.107-1.64M29.714 12a9.326 9.326 0 0 0-9.333-9.333"
               />
             </svg>
-            <h3 class="hero__subtitle">З’єднаємо зараз</h3>
+            <h3 className="hero__subtitle">З’єднаємо зараз</h3>
           </li>
-          <li class="hero__item">
-            <svg class="hero__icon" width="42" height="42">
+          <li className="hero__item">
+            <svg className="hero__icon" width="42" height="42">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -48,10 +48,10 @@ export const Hero = () => {
                 d="M20.927 18.266h.012m-.012 4h.012m-4.946-4h.013m-.013 4h.013m-4.947-4h.013m-.013 4h.013"
               />
             </svg>
-            <h3 class="hero__subtitle">Цілодобово</h3>
+            <h3 className="hero__subtitle">Цілодобово</h3>
           </li>
-          <li class="hero__item">
-            <svg class="hero__icon" width="42" height="42">
+          <li className="hero__item">
+            <svg className="hero__icon" width="42" height="42">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -65,17 +65,17 @@ export const Hero = () => {
                 d="M3.333 16.547v-6.093c0-1.587.973-3 2.453-3.56l10.587-4A2.529 2.529 0 0 1 19.51 4.09c.19.363.289.767.289 1.177v5.067M9.333 16h9.333m11.413 2.627v2.747a1.37 1.37 0 0 1-1.333 1.36h-2.613c-1.44 0-2.76-1.053-2.88-2.493-.08-.84.24-1.627.8-2.173a2.655 2.655 0 0 1 1.92-.8h2.773a1.369 1.369 0 0 1 1.333 1.36z"
               />
             </svg>
-            <h3 class="hero__subtitle">Вартість 400 грн</h3>
+            <h3 className="hero__subtitle">Вартість 400 грн</h3>
           </li>
         </ul>
-        <div class="hero__imgblock">
+        <div className="hero__imgblock">
           <picture>
             <source srcset={photo1} media="(min-width: 1766px)" />
             <source srcset={photo1} media="(min-width: 1334px)" />
             <source srcset={photo1} media="(max-width: 1333px)" />
             <img
               fetchpriority="high"
-              class="hero__img"
+              className="hero__img"
               width="240"
               height="240"
               src={photo1}
