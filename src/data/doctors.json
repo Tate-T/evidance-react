@@ -1,0 +1,20 @@
+[
+  {
+    "fullName": "Іван Петренко",
+    "birthDate": "1985-06-15",
+    "gender": "Чоловіча",
+    "number": "EV-012345",
+    "email": "ivan@example.com",
+    "password": "password123",
+    "numTel": "+380680265617"
+  },
+  {
+    "fullName": "Олена Коваль",
+    "birthDate": "1990-09-23",
+    "gender": "Жіноча",
+    "number": "EV-054321",
+    "email": "olena@example.com",
+    "password": "secure456",
+    "numTel": "+380680255217"
+  }
+]

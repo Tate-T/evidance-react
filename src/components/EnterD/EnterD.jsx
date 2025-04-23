@@ -1,45 +1,41 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { login } from "../../redux/authSlice";
 import "./EnterD.scss";
 import logo from "./img/logo@1x-desktop.webp";
 
 export const EnterD = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
-  const error = useSelector((state) => state.auth.error);
-  const user = useSelector((state) => state.auth.user);
 
   useEffect(() => {
-    const successMessage = sessionStorage.getItem("loginSuccess");
+    const successMessage = localStorage.getItem("loginSuccess");
     if (successMessage) {
       toast.success(successMessage);
-      sessionStorage.removeItem("loginSuccess");
+      localStorage.removeItem("loginSuccess");
     }
   }, []);
 
-  useEffect(() => {
-    if (user && !error) {
-      sessionStorage.setItem(
-        "loginSuccess",
-        `Привіт, ${user.name}! Ви успішно авторизувалися`
-      );
-      navigate("/profile");
-    }
-
-    if (error) {
-      toast.error(error);
-    }
-  }, [user, error, navigate]);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(login({ number, password }));
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+    const foundUser = users.find(
+      (user) => user.number === number && user.password === password
+    );
+
+    if (foundUser) {
+      localStorage.setItem(
+        "loginSuccess",
+        `Привіт, ${foundUser.fullName}! Ви успішно авторизувалися`
+      );
+      localStorage.setItem("user", JSON.stringify(foundUser));
+      navigate("/profile");
+    } else {
+      toast.error("Невірний номер телефону або пароль");
+    }
   };
 
   return (
@@ -104,13 +100,9 @@ export const EnterD = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <svg className="enterD__eye" width="20" height="20">
-                  <use href="./svg/icons.svg#eye-slash"></use>
-                </svg>
               </label>
             </li>
           </ul>
-          {error && <p className="enterD__error">{error}</p>}
           <button type="submit" className="enterD__btn">
             Вхід
           </button>
