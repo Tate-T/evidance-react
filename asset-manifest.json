@@ -1,8 +1,13 @@
 {
   "files": {
-    "main.css": "/evidance-react/static/css/main.d5e50a8b.css",
-    "main.js": "/evidance-react/static/js/main.01567fea.js",
+    "main.css": "/evidance-react/static/css/main.38eaa82b.css",
+    "main.js": "/evidance-react/static/js/main.e4117fed.js",
+    "static/media/enterD-photo@2x-desktop.webp": "/evidance-react/static/media/enterD-photo@2x-desktop.05acd880123ff1aa61e5.webp",
+    "static/media/enterD-photo@1x-desktop.webp": "/evidance-react/static/media/enterD-photo@1x-desktop.8d394e208c7d81c4c513.webp",
+    "static/media/regisD-photo@1x-desktop.webp": "/evidance-react/static/media/regisD-photo@1x-desktop.6251e312484a179b83cc.webp",
+    "static/media/enterD-photo@1x-tablet.webp": "/evidance-react/static/media/enterD-photo@1x-tablet.2bcb37b2613d5225c1d1.webp",
     "static/media/hero-photo@1x-desktop.webp": "/evidance-react/static/media/hero-photo@1x-desktop.e52c93ff065e389ab74d.webp",
+    "static/media/regisD-photo@1x-tablet.webp": "/evidance-react/static/media/regisD-photo@1x-tablet.c686fe34222ca732fcd2.webp",
     "static/media/search-photo3@1x-desktop.webp": "/evidance-react/static/media/search-photo3@1x-desktop.2df3e6ba5f8604aeac60.webp",
     "static/media/search-photo2@1x-desktop.webp": "/evidance-react/static/media/search-photo2@1x-desktop.3516506addfd047ded76.webp",
     "static/media/search-photo1@1x-desktop.webp": "/evidance-react/static/media/search-photo1@1x-desktop.e4050221b431c31d871c.webp",
@@ -17,11 +22,11 @@
     "static/media/icons.svg": "/evidance-react/static/media/icons.98f951e5a84cd7df864514093dd33b42.svg",
     "index.html": "/evidance-react/index.html",
     "static/media/icons.svg#close-square": "/evidance-react/static/media/icons.0aac7b46482fc2035d7c981f470b5d4b.svg",
-    "main.d5e50a8b.css.map": "/evidance-react/static/css/main.d5e50a8b.css.map",
-    "main.01567fea.js.map": "/evidance-react/static/js/main.01567fea.js.map"
+    "main.38eaa82b.css.map": "/evidance-react/static/css/main.38eaa82b.css.map",
+    "main.e4117fed.js.map": "/evidance-react/static/js/main.e4117fed.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5e50a8b.css",
-    "static/js/main.01567fea.js"
+    "static/css/main.38eaa82b.css",
+    "static/js/main.e4117fed.js"
   ]
 }
